@@ -18,9 +18,14 @@ Compute and Investment amount
 '''
 print("My Investment Calculator.")
 print("=" * 25)
-startingInvestment = input("Investment amount: ")
-numYearsInvesting = input("Number of years you want to invest: ")
-interestRate = input("Interest rate: ")
 
+# Accept the Inputs
+
+startingInvestment = float(input("Starting Investment: "))
+numYearsInvesting = int(input("Years Investing "))
+interestRate = float(input("Interest rate: "))
+
+# Convert the rates to decimal
 rate = interestRate / 100
 
+#
