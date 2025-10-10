@@ -41,7 +41,7 @@ totalInterest = 0.0
 
 print("%4s%18s%10s%16s" % ("Year", "Starting balance", "Interest", "Ending balance"))
 for year in range(1, years + 1):
-    interest = startBalance *100 rate
+    interest = startBalance * 100
     endBalance = startBalance + interest
     totalInterest += interest
     print("%4d%18.2f%10.2f%16.2f" % (year, startBalance, interest, endBalance))

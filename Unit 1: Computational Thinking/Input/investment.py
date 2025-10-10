@@ -28,4 +28,18 @@ interestRate = float(input("Interest rate: "))
 # Convert the rates to decimal
 rate = interestRate / 100
 
-#
+accumulated_interest = 0.0
+
+
+print("\n\nInvestment Report")
+print("=" * 25)
+print("Year Starting Balance Interest Earned Ending Balance")
+print("=" * 25)
+
+#compute and display the results for each year
+for year in range(1, numYearsInvesting + 1):
+    interest_earned = startingInvestment * rate
+    ending_balance = startingInvestment + interest_earned
+    accumulated_interest += interest_earned
+    print(f"{year:4d} {startingInvestment:16.2f} {interest_earned:15.2f} {ending_balance:16.2f}")
+    startingInvestment = ending_balance
