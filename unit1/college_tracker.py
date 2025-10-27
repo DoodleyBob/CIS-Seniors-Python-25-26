@@ -111,6 +111,7 @@ distances.append(distance)
 acceptance_rates.append(acceptance_rate)
 classifications.append(classification)
 
+
 # College Application Summary
 print("\n\n")
 print("=" * 30)
@@ -122,5 +123,22 @@ print(f"College1: {colleges[0]}")
 print(f"Location: {locations[0]}")
 print(f"Annual Tuition: {annual_tuitions[0]:.2f}")
 print(f"Classification: {classifications[0]}")
-four_year_total = annual_tuition * 4
+four_year_total = annual_tuition[0] * 4
 print(f"4-Year Total Cost: ${four_year_total:.2f}")
+print("")
+
+print(f"College1: {colleges[1]}")
+print(f"Location: {locations[1]}")
+print(f"Annual Tuition: {annual_tuitions[1]:.2f}")
+print(f"Classification: {classifications[1]}")
+four_year_total = annual_tuitions[1] * 4
+print(f"4-Year Total Cost: ${four_year_total:.2f}")
+print("")
+
+print(f"College1: {colleges[2]}")
+print(f"Location: {locations[2]}")
+print(f"Annual Tuition: {annual_tuitions[2]:.2f}")
+print(f"Classification: {classifications[2]}")
+four_year_total = annual_tuitions[2] * 4
+print(f"4-Year Total Cost: ${four_year_total:.2f}")
+
