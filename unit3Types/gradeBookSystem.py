@@ -30,7 +30,7 @@ student2 = {
 
 # Student 3
 student3 = {
-    "name": "Emma Rodriguez",
+    "name": "Sophia Petel",
     "id": "S12347",
     "math_grade": 98,
     "english_grade": 96,
@@ -44,16 +44,40 @@ grade_book = [
     student2,
     student3
 ]
+print()
 
 def print_class_report(students):
     """Prints a formatted report for all students"""
     # Your code here
+    print("=" * 30)
+    print("CLASS GRADE REPORT")
+    print("=" * 30)
+    print("\n")
 
+    for student in students:
+        print(f"Student: {student['name']}")
+        print(f"ID: {student['id']}")
+        print(f"Math: {student['math_grade']}")
+        print(f"English: {student['english_grade']}")
+        print(f"Science: {student['science_grade']}")
+        print(f"History: {student['history_grade']}")
+        print(f"Average: {student['average']}")
+        print("-" * 25)
+        
     pass
 
+print("\n")
 def find_top_student(students):
     """Returns the student with the highest average"""
     # Your code here
+    highest_average = 1
+    top_student = None
+    for student in students:
+        if student["average"] > highest_average:
+            top_student = student
+            print(f"Top Student: {student["name"]}")
+            print(f"Average: {highest_average}")
+
     pass
 
 def count_honor_students(students):
