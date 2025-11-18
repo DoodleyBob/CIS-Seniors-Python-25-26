@@ -1,14 +1,14 @@
 def display_welcome():
     """Display program header"""
-    print("Welcome to College Application Tracker!")
+    print("=== Welcome to College Application Tracker! ===")
 def get_college_count():
     """
     Get number of colleges user is applying to
     Return
         count (int)
     """
-    count_str = input("How many colleges are you applying to? ")
-    count = int(count_str)
+    num_colleges = input("How many colleges are you applying to? ")
+    return int(num_colleges)
 
 def get_application_costs(num_colleges):
     """
@@ -18,8 +18,7 @@ def get_application_costs(num_colleges):
         total_cost (float)
     """
     application_cost = 50.00
-    totalCost = application_cost * count
-    total_cost = float(totalCost)
+    total_cost = application_cost * num_colleges
     return total_cost
 
 def get_sat_score():
@@ -29,7 +28,8 @@ def get_sat_score():
     Return:
         score (int)
     """
-    score = int(input("SAT Score: "))
+    score = input("SAT Score: ")
+    return int(score)
 
 def analyze_sat(score):
     """
@@ -40,22 +40,23 @@ def analyze_sat(score):
     else - Consider retaking to improve college options.
     """
     if score >= 1400:
-        print("Excellent")
+        return "Excellent"
     elif score >= 1200:
-        print("Good Score")
+        return "Good Score"
     elif score >= 1000:
-        print("Solid Foundation")
+        return "Solid Foundation"
     else:
-        print("Consider retaking to improve college options.")
+        return "Consider retaking to improve college options."
 
-def display_summary(colleges, cost, sat_score, sat_feedback):
+def display_summary(num_colleges, total_cost, sat_score, sat_feedback):
     """
     Display summary of application information
     """
-    print("\nCollege Count: " + str(colleges))
-    print("Cost: $" + str(cost))
-    print("SAT Score: " + str(sat_score))
-    print("SAT Feedback: " + sat_feedback)
+    print("\n=== Application Summary ===")
+    print(f"Number of Colleges applied to: {num_colleges}")
+    print(f"Total Application Cost: {total_cost}")
+    print(f"SAT Score: {sat_score}")
+    print(f"Feedback: {sat_feedback}")
 
 
 
