@@ -54,7 +54,7 @@ def display_summary(num_colleges, total_cost, sat_score, sat_feedback):
     """
     print("\n=== Application Summary ===")
     print(f"Number of Colleges applied to: {num_colleges}")
-    print(f"Total Application Cost: {total_cost}")
+    print(f"Total Application Cost: {total_cost:.2f}")
     print(f"SAT Score: {sat_score}")
     print(f"Feedback: {sat_feedback}")
 
